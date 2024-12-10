@@ -11,6 +11,15 @@ import java.util.List;
 public class MemberController {
     List<Member> memberList =new ArrayList<>();
 
+    public MemberController() {
+        memberList.add(new Member(1, "John Doe", "john.doe@example.com", 30));
+        memberList.add(new Member(2, "Jane Smith", "jane.smith@example.com", 25));
+        memberList.add(new Member(3, "Alex Johnson", "alex.johnson@example.com", 35));
+        memberList.add(new Member(4, "Emily Davis", "emily.davis@example.com", 28));
+        memberList.add(new Member(5, "Michael Brown", "michael.brown@example.com", 40));
+        memberList.add(new Member(6, "Sarah White", "sarah.white@example.com", 22));
+    }
+
     @GetMapping("/getAllMember")
     public List<Member> getMember(){
         return memberList;
@@ -30,6 +39,7 @@ public class MemberController {
         return memberList;
     }
 
+    @PutMapping("/updateMember/{memberID}")
     public Member updateMember(@PathVariable int memberID, @Valid @RequestBody Member updatedMember) {
         for (int i = 0; i < memberList.size(); i++) {
             Member existingMember = memberList.get(i);
