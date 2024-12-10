@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ie.atu</groupId>
-    <artifactId>Week6</artifactId>
+    <artifactId>CICD_Member</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Week6</name>
-    <description>Week6</description>
+    <name>CICD_Member</name>
+    <description>CICD_Member</description>
     <url/>
     <licenses>
         <license/>
