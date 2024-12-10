@@ -11,22 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Member {
-    //add auto increment of id use this to search up users and their information
     @Min(value=1, message = "Member must has a valid ID of 1 or greater")
-    private int MemberID;
-
+    private int memberID;
     @NotBlank(message = "You must enter  valid name")
-    private String Name;
-
+    private String name;
     @Email(message = "Must enter a valid email address")
-    private String EmailAddress;
-
+    private String emailAddress;
     @Min(value = 16,message = "Members must be over 16")
-    private int Age;
-
-    //Possible boolean for membership status may be handled in the membership service
-    //@NotBlank
-    //boolean MemberStatus;
-
-
+    private int age;
 }
