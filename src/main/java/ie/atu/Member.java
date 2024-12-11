@@ -2,7 +2,9 @@ package ie.atu;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,4 +21,9 @@ public class Member {
     private String emailAddress;
     @Min(value = 16,message = "Members must be over 16")
     private int age;
+    @NotBlank(message = "Membership status cannot be blank")
+    @Pattern(regexp = "Active|Expired", message = "Membership status must be 'Active' or 'Expired'")
+    private String membershipStatus;
+    @Max(value = 24, message = "Membership duration must not exceed 24 months")
+    private int membershipDuration;
 }
