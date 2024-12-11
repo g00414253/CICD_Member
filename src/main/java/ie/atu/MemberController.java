@@ -12,12 +12,12 @@ public class MemberController {
     List<Member> memberList =new ArrayList<>();
 
     public MemberController() {
-        memberList.add(new Member(1, "John Doe", "john.doe@example.com", 30));
-        memberList.add(new Member(2, "Jane Smith", "jane.smith@example.com", 25));
-        memberList.add(new Member(3, "Alex Johnson", "alex.johnson@example.com", 35));
-        memberList.add(new Member(4, "Emily Davis", "emily.davis@example.com", 28));
-        memberList.add(new Member(5, "Michael Brown", "michael.brown@example.com", 40));
-        memberList.add(new Member(6, "Sarah White", "sarah.white@example.com", 22));
+        memberList.add(new Member(1, "John Doe", "john.doe@example.com", 30, "Active", 12));
+        memberList.add(new Member(2, "Jane Smith", "jane.smith@example.com", 25, "Active", 6));
+        memberList.add(new Member(3, "Alex Johnson", "alex.johnson@example.com", 35, "Expired", 0));
+        memberList.add(new Member(4, "Emily Davis", "emily.davis@example.com", 28, "Active", 24));
+        memberList.add(new Member(5, "Michael Brown", "michael.brown@example.com", 40, "Expired", 0));
+        memberList.add(new Member(6, "Sarah White", "sarah.white@example.com", 22, "Active", 3));
     }
 
     @GetMapping("/getAllMember")
