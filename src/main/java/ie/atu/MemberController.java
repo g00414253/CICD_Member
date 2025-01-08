@@ -59,3 +59,19 @@ public class MemberController {
     }
 }
 
+/*  TESTING TALEND API ENTRIES
+    http://localhost:8080/member/getAllMember
+    http://localhost:8080/member/getMember/2
+    http://localhost:8080/member/addMember
+    {
+  "memberID": 42,
+  "name": "Eval",
+  "emailAddress": "evmail@dhddh.com",
+  "age": 66,
+  "membershipStatus": "Expired",
+  "membershipDuration": 0
+ }
+
+   http://localhost:8080/member/updateMember/1
+   http://localhost:8080/member/deleteMember/1
+ */
